@@ -1,4 +1,20 @@
-<!--index.wxml-->
+<!--index.wxml
 <view class="container">
- <text>hello world</text>
+  <text>{{motto}}</text>
+  <view bindtap='bindViewTab'>
+    <image src='b64543a98226cffce0028a20bb014a90f603ea7c.jpg'></image>
+  </view>
 </view>
+-->
+
+<swiper indicator-dots='{{indicatorDots}}' duration='1000'
+autoplay='true'>
+  <block wx:for='{{imgUrls}}'>
+    <swiper-item>
+      <image src='{{item}}' class='slide-image' width='355' height='150'></image>
+    </swiper-item>
+  </block>
+</swiper>
+<button bindtap='changeIndicatorDots'> indicator-dots </button>
+
+<slider bindchange='intervalChange'></slider>

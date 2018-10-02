@@ -4,11 +4,33 @@ const app = getApp()
 
 Page({
   data: {
+    imgUrls:[
+      'pictures/1.jpg',
+      'pictures/2.jpg',
+      'pictures/3.jpg',
+      'pictures/4.jpg',
+      'pictures/5.jpg',
+      'pictures/6.jpg'
+    ],
     motto: 'Hello World',
+    indicatorDots:false,
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+  changeIndicatorDots:function(e){
+    debugger;
+    this.setData({
+      indicatorDots:!this.data.indicatorDots
+    })
+  },
+  intervalChange:function(e){
+    debugger;
+    this.setData({
+      interval:e.detail.value
+    })
+  }
+  ,
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
