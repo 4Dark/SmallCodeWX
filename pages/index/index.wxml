@@ -25,6 +25,17 @@ autoplay='true'>
   </block>
 </view>
 -->
-
+<!-- 
 <text>进度条组件</text>
 <progress percent='100' show-info='true' color='blue' active='true'></progress>
+-->
+<!-- 
+<button type='warn' size='default' loading='false' plain='false' disabled='false' bindtap='warn' hover-class='other-button-hover'>default</button>
+-->
+<checkbox-group bindchange="checkChange">
+  <label class='checkbox' wx:for='{{items}}' wx:key='name'>
+  <checkbox value='{{item.name}}'>{{item.value}}</checkbox>
+  </label>
+</checkbox-group>
+<checkbox disabled='cansee'></checkbox>
+<checkbox checked='true'></checkbox>

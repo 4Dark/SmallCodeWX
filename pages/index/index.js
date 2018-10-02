@@ -4,6 +4,9 @@ const app = getApp()
 
 Page({
   data: {
+    items:[{name:'1',value:'选择1'},
+      { name: '2', value: '选择2' },
+      { name: '3', value: '选择3' }],
     iconSize:[20,30,40,50,60],
     imgUrls:[
       'pictures/1.jpg',
@@ -15,6 +18,8 @@ Page({
     ],
     motto: 'Hello World',
     indicatorDots:false,
+    cansee:true,
+    nocansee:false,
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
