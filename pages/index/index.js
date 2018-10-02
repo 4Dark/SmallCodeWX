@@ -4,6 +4,7 @@ const app = getApp()
 
 Page({
   data: {
+    iconSize:[20,30,40,50,60],
     imgUrls:[
       'pictures/1.jpg',
       'pictures/2.jpg',

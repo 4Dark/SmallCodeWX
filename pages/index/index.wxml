@@ -6,7 +6,7 @@
   </view>
 </view>
 -->
-
+<!--
 <swiper indicator-dots='{{indicatorDots}}' duration='1000'
 autoplay='true'>
   <block wx:for='{{imgUrls}}'>
@@ -16,5 +16,15 @@ autoplay='true'>
   </block>
 </swiper>
 <button bindtap='changeIndicatorDots'> indicator-dots </button>
-
 <slider bindchange='intervalChange'></slider>
+-->
+<!-- 
+<view class='group'>
+  <block wx:for='{{iconSize}}'>
+  <icon type='success' size='{{item}}'></icon>
+  </block>
+</view>
+-->
+
+<text>进度条组件</text>
+<progress percent='100' show-info='true' color='blue' active='true'></progress>
