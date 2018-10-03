@@ -72,8 +72,30 @@ autoplay='true'>
     <text>{{date}}</text>
 </picker>
 -->
+<!-- 
 <radio-group class='radio-group' bindchange='radioChange'>
   <label class='radio' wx:for='{{items}}'>
   <radio value='{{item.name}}' checked='{{item.checked}}'>{{item.value}}</radio>
   </label>
 </radio-group>
+-->
+<view class='myView'>
+<text>禁用</text>
+<slider disabled='{{true}}'></slider>
+</view>
+
+<view class='myView'>
+<text>可用</text>
+<slider step='5' show-value></slider>
+</view>
+
+<view class='myView'>
+<text>初始值</text>
+<slider step='5' value='80' show-value></slider>
+</view>
+
+<view class='myView'>
+<text>最小值最大值</text>
+<slider step='5' value='80' show-value min='50' max='200'></slider>
+</view>
+
