@@ -4,9 +4,18 @@ Page({
     array: ['Android', 'IOS', 'ReactNativ', 'WeChat', 'Web'],
     index: 0,
     time: '08:30',
-    date: '2016-09-26'
+    date: '2016-09-26',
+    items:[
+      {name:'a',value:'1'},
+      {name:'b',value:'2',checked:'true'},
+      {name:'c',value:'3'}
+    ]
   },
 
+
+  radioChange:function(e){
+    console.log(e.detail.value)
+  },
   /**
    * 监听普通picker选择器
    */

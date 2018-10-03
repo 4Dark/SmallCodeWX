@@ -55,8 +55,8 @@ autoplay='true'>
 <input bindinput='bindKeyInput' placeholder='输入同步到view中'></input>
 </view>
 -->
+<!-- 
 <view>普通选择器</view>
-<!--mode默认selector range数据源value选择的index bindchange事件监听-->
 <picker mode="selector" range="{{array}}" value="{{index}}" bindchange="listenerPickerSelected">
     <text>{{array[index]}}</text>
 </picker>
@@ -71,6 +71,9 @@ autoplay='true'>
 <picker mode="date" value="{{date}}" start="2016-09-26" end="2017-10-10" bindchange="listenerDatePickerSelected">
     <text>{{date}}</text>
 </picker>
-
-
-
+-->
+<radio-group class='radio-group' bindchange='radioChange'>
+  <label class='radio' wx:for='{{items}}'>
+  <radio value='{{item.name}}' checked='{{item.checked}}'>{{item.value}}</radio>
+  </label>
+</radio-group>
