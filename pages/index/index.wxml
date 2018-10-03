@@ -100,7 +100,16 @@ autoplay='true'>
 <slider step='5' value='80' show-value min='50' max='200'></slider>
 </view>
 -->
+<!-- 
 <view class='myView'>
 <switch checked bindchange='switchChange'></switch>
 <switch></switch>
 </view>
+-->
+<view class='myView'>
+<textarea bindfocus='bindGetFocus' bindblur='bindLostFocus' bindlinechange='bindLineChange' auto-height placeholder='文本框'></textarea>
+</view>
+
+
+
+
