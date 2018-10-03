@@ -11,7 +11,9 @@ Page({
       {name:'c',value:'3'}
     ]
   },
-
+  switchChange:function(e){
+    console.log(e.detail.value);
+  },
 
   radioChange:function(e){
     console.log(e.detail.value)

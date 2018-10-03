@@ -79,6 +79,7 @@ autoplay='true'>
   </label>
 </radio-group>
 -->
+<!-- 
 <view class='myView'>
 <text>禁用</text>
 <slider disabled='{{true}}'></slider>
@@ -98,4 +99,8 @@ autoplay='true'>
 <text>最小值最大值</text>
 <slider step='5' value='80' show-value min='50' max='200'></slider>
 </view>
-
+-->
+<view class='myView'>
+<switch checked bindchange='switchChange'></switch>
+<switch></switch>
+</view>
