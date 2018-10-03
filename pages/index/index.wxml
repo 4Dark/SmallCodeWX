@@ -32,6 +32,7 @@ autoplay='true'>
 <!-- 
 <button type='warn' size='default' loading='false' plain='false' disabled='false' bindtap='warn' hover-class='other-button-hover'>default</button>
 -->
+<!-- 
 <checkbox-group bindchange="checkChange">
   <label class='checkbox' wx:for='{{items}}' wx:key='name'>
   <checkbox value='{{item.name}}'>{{item.value}}</checkbox>
@@ -39,3 +40,37 @@ autoplay='true'>
 </checkbox-group>
 <checkbox disabled='cansee'></checkbox>
 <checkbox checked='true'></checkbox>
+-->
+
+<!-- 
+  <form bindreset='formSubmit' bindreset='formResst'>
+    <input name='input' placeholder='在此输入'></input>
+    <button type='warn' form-type='submit'>提交</button>
+    <button form-type='reset'>重置</button>
+  </form>
+-->
+<!-- 
+<view class='myBackGround'>
+<view class='section_title'>输入是:{{inputValue}}</view>
+<input bindinput='bindKeyInput' placeholder='输入同步到view中'></input>
+</view>
+-->
+<view>普通选择器</view>
+<!--mode默认selector range数据源value选择的index bindchange事件监听-->
+<picker mode="selector" range="{{array}}" value="{{index}}" bindchange="listenerPickerSelected">
+    <text>{{array[index]}}</text>
+</picker>
+
+
+<view>时间选择器</view>
+<picker mode="time" value="{{time}}" start="06:00" end="24:00" bindchange="listenerTimePickerSelected">
+    <text>{{time}}</text>
+</picker>
+
+<view>日期选择器</view>
+<picker mode="date" value="{{date}}" start="2016-09-26" end="2017-10-10" bindchange="listenerDatePickerSelected">
+    <text>{{date}}</text>
+</picker>
+
+
+

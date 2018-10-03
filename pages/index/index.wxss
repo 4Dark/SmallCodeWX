@@ -10,8 +10,15 @@ display:flex;
 color: blue;
 }
 
-
-
+.myBackGround{
+  height: 100%;
+  width: 100%;
+  background-color: blue;
+}
+.myView{
+  padding: 10px;
+  padding-top: 10%;
+}
 .userinfo-avatar {
   width: 128rpx;
   height: 128rpx;

@@ -1,82 +1,55 @@
-//index.js
-//获取应用实例
-const app = getApp()
-
 Page({
   data: {
-    items:[{name:'1',value:'选择1'},
-      { name: '2', value: '选择2' },
-      { name: '3', value: '选择3' }],
-    iconSize:[20,30,40,50,60],
-    imgUrls:[
-      'pictures/1.jpg',
-      'pictures/2.jpg',
-      'pictures/3.jpg',
-      'pictures/4.jpg',
-      'pictures/5.jpg',
-      'pictures/6.jpg'
-    ],
-    motto: 'Hello World',
-    indicatorDots:false,
-    cansee:true,
-    nocansee:false,
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    // text:"这是一个页面"
+    array: ['Android', 'IOS', 'ReactNativ', 'WeChat', 'Web'],
+    index: 0,
+    time: '08:30',
+    date: '2016-09-26'
   },
-  changeIndicatorDots:function(e){
+
+  /**
+   * 监听普通picker选择器
+   */
+  listenerPickerSelected: function (e) {
+    //改变index值，通过setData()方法重绘界面
+    this.setData({
+      index: e.detail.value
+    });
+  },
+
+  /**
+   * 监听时间picker选择器
+   */
+  listenerTimePickerSelected: function (e) {
+    //调用setData()重新绘制
     debugger;
     this.setData({
-      indicatorDots:!this.data.indicatorDots
+      time: e.detail.value,
+    });
+  },
+
+  /**
+   * 监听日期picker选择器
+   */
+  listenerDatePickerSelected: function (e) {
+    this.setDate({
+      date: e.detail.value
     })
   },
-  intervalChange:function(e){
-    debugger;
-    this.setData({
-      interval:e.detail.value
-    })
-  }
-  ,
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+
+  onLoad: function (options) {
+    // 页面初始化 options为页面跳转所带来的参数
   },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
+  onReady: function () {
+    // 页面渲染完成
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
+  onShow: function () {
+    // 页面显示
+  },
+  onHide: function () {
+    // 页面隐藏
+  },
+  onUnload: function () {
+    // 页面关闭
   }
 })
