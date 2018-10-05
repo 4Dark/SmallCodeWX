@@ -116,7 +116,16 @@ autoplay='true'>
 <textarea bindfocus='bindGetFocus' bindblur='bindLostFocus' bindlinechange='bindLineChange' auto-height placeholder='文本框'></textarea>
 </view>
 -->
+<!--
 <view class='btn-area'>
   <navigator url='test' hover-class='navigator-hover'>跳转到新页面</navigator>
   <navigator url='test' hover-class='other-navigator-hover' redirect>在当前页面打开</navigator>
+</view>
+-->
+
+<view class='myView'>
+<audio poster='https://static.tuchong.net/images/site-bg-2.jpg' name='雨神' author='xk' src='http://fs.w.kugou.com/201810052312/fac9ca7dd6433a5ce691b4f898ec283a/G125/M06/1B/13/HYcBAFp5W_eAUxXtAEd8lM9hkg8413.mp3' id='myAudio' controls loop></audio>
+<button class='btn' type='primary' bindtap='audioPlay'>播放</button>
+<button class='btn' type='warn' bindtap='audioPausea'>暂停</button>
+<button class='btn' type='default' bindtap='audioseek30'>暂停30s</button>
 </view>

@@ -34,3 +34,8 @@ color: blue;
 .usermotto {
   margin-top: 200px;
 }
+.btn{
+  width: 30%;
+  float: left;
+  margin-left:10px 
+}

@@ -67,11 +67,22 @@ Page({
       date: e.detail.value
     })
   },
+  audioPlay:function(e){
+    this.audioUsr.play();
+  },
+  audioPausea:function(e){
+    this.audioUsr.pause();
+  },
+  audioseek30:function(e){
+    this.audioUsr.seek(30)
+  },
+
 
   onLoad: function(options) {
     // 页面初始化 options为页面跳转所带来的参数
   },
   onReady: function() {
+    this.audioUsr = wx.createAudioContext('myAudio');
     // 页面渲染完成
   },
   onShow: function() {
