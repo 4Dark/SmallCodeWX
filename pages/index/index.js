@@ -2,7 +2,14 @@ var i =0;
 Page({
   data: {
     // text:"这是一个页面"
-    array: ['Android', 'IOS', 'ReactNativ', 'WeChat', 'Web'],
+    array: [
+      { mode: 'scaleToFill', text:'scaleToFill'},
+      { mode: 'aspectFit', text: 'aspectFit' },
+      { mode: 'aspectFill', text: 'aspectFill' }
+
+
+    ],
+    src:'pictures/1.jpg',
     index: 0,
     time: '08:30',
     date: '2016-09-26',
