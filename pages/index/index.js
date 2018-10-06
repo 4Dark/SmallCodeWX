@@ -1,6 +1,13 @@
 var i =0;
 Page({
   data: {
+    markers:[{
+      latitude: 23.099995,
+      longitude:110.404056,
+      name:'xk',
+      desc:'xk'
+    }]
+    ,
     // text:"这是一个页面"
     array: [
       { mode: 'scaleToFill', text:'scaleToFill'},
